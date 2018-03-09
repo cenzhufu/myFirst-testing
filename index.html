@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<title>双向数据绑定</title>
+</head>
+<body>
+	
+	<div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="panel-title">
+					双向数据绑定
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<form class="form-horizontal" role="form" ng-controller="userInfoCtr">
+							<div class="form-group">
+								<label class="col-md-2 control-label">
+									邮箱：
+								</label>
+								<div class="col-md-10">
+									<input type="email" class="form-control" placeholder="请输入邮箱" ng-model="userInfo.email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">
+									密码：
+								</label>
+								<div class="col-md-10">
+									<input type="password" class="form-control" placeholder="请输入密码" ng-model="userInfo.password">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-offset-2 col-md-10">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" ng-model="userInfo.autoLogin">记住登录
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-offset-2 col-md-10">
+								<button type="button" ng-click="getUserInfo()">	获取表单的值
+								</button>
+								<button type="button" ng-click="setUserInfo()">
+									设置表单的值
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="js/angular_1.js"></script>
+</body>
+</html>
